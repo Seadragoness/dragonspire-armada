@@ -1,0 +1,778 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+/* === Color Palette: === */
+:root {
+    --content-bg: #0009;
+    --dark-panel-bg: #131720D0;
+    --dark-panel-border: #06547a;
+    --dark-panel-shadow-outer: #0000;
+    --dark-panel-shadow-inner: #0000;
+    --dark-panel-border-hover: #0b83bd;
+    --dark-panel-shadow-hover: #096a99;
+    --link: #ad853e;
+    --link-hover: #dfd099;
+    --text: #fff;
+}
+/* =============================== ARMADA – CITADEL SYSTEM =============================== */
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334 !important;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+    background: none !important;
+    width: 6px;
+}
+
+html>::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: none !important;
+}
+
+h2 {
+    text-shadow: 0 0 6px #FFF;
+}
+
+/* Inherited from pack page */
+h2, a:hover, summary:hover, header .title, input.button:hover, .packbanner>*, a, input.button, summary, html, p {
+    color: var(--text) !important;
+}
+
+.armada-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px 0px 80px;
+    font-family: "Dosis", sans-serif;
+    color: #e6edf6;
+}
+
+/* ===== PACKBANNER ===== */
+.thead.packbanner {
+    position: absolute;
+    inset: -550px 0 0;
+}
+
+.packbanner {
+    height: 500px;
+    padding-top: 185px;
+    background: none;
+}
+
+.packbanner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://i.imgur.com/XHuQI22.png") center / contain no-repeat;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.packbanner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://i.imgur.com/XHuQI22.png") center / contain no-repeat;
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.packbanner h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: clamp(0vw, 8.6vw, 64px);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-shadow: 0 0 14px rgba(120, 180, 255, 1), 0 0 40px rgba(80, 150, 255, 0.8), 0 0 80px rgba(50, 120, 255, 0.6);
+    border-style: solid;
+    border-width: 0px 0px 2px;
+    border-image: linear-gradient(90deg, #0000 20%, #ffbb41, #0000 80%) 1;
+    padding: 0 0 44px;
+    margin: 0 auto 14px;
+    width: min-content;
+}
+
+.packbanner h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: #ffbb41 !important;
+    text-shadow: none;
+    text-shadow: 0 0 6px #000;
+}
+
+/* ===== COLUMN GRID (NEW) ===== */
+.armada-main-panels {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    position: relative;
+}
+
+.armada-main-panels .armada-panel {
+    padding: 30px;
+    width: 49%;
+}
+
+.armada-panel,
+li:has(.relation),
+.armada-quicklinks a,
+.packwrap>div:nth-last-child(1),
+.packwrap>div:nth-last-child(2) {
+    background: var(--dark-panel-bg);
+    border: 1px solid var(--dark-panel-border);
+}
+
+.armada-panel>h2::before,
+.armada-panel>h2::after {
+    content: '';
+    width: 50px;
+    height: 90px;
+    position: absolute;
+    translate: -38px -40px;
+    background: no-repeat url('https://i.imgur.com/dN3bkAU.png') center / 50px;
+}
+
+.armada-panel h2::after {
+    scale: -1 1;
+    translate: -22px -40px;
+}
+
+.armada-panel h2 {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.armada-panel iframe {
+    border: none;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+.laws summary:hover {
+    color: var(--link) !important;
+}
+
+.laws details[open] summary {
+    color: var(--link) !important;
+}
+
+.laws details {
+    border-image: linear-gradient(90deg, #c9a85d7d, #0000 70%) 1;
+    border-width: 0 0 1px 0;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.laws details::before {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: #35587d;
+    rotate: -30deg;
+    transition: 0.4s;
+    mask: url('https://i.imgur.com/AoWYkf6.png') center/100%;
+    translate: 0px 4px;
+}
+
+.laws summary::before {
+    content: none;
+}
+
+.laws details[open]::before {
+    rotate: 40deg;
+}
+
+.laws summary {
+    display: block;
+    padding: 12px 0 12px 42px;
+    cursor: pointer;
+    font-family: "Cinzel Decorative", serif;
+    border: none;
+    transition: 0.05s ease-in;
+}
+
+.vr-place {
+    border: 1px solid var(--dark-panel-border);
+    background: #022D56;
+    margin: 40px 0 0;
+    padding: 10px;
+    box-shadow: inset 0 0 12px #121124;
+}
+
+.vr-place h3 {
+    margin: -26px 0 14px 0;
+    border: 1px solid var(--dark-panel-border-hover);
+    border-width: 0 0 1px 0;
+    padding: 0 0 8px 0;
+}
+.news p {
+    margin: 0px;
+}
+
+.news b {
+    color: var(--link);
+    font-weight: normal;
+}
+
+/* ===== COLLAPSIBLE ===== */
+input.armada-toggle {
+    display: none !important;
+}
+
+.armada-label {
+    display: block;
+    padding: 14px 0;
+    cursor: pointer;
+    font-family: "Cinzel Decorative", serif;
+    border-bottom: 1px solid rgba(201, 168, 93, 0.35);
+}
+
+.armada-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #cfd8e6;
+}
+
+.armada-toggle:checked+.armada-label+.armada-content {
+    max-height: 800px;
+    padding-top: 15px;
+}
+
+/* ===== SMALLER LINKS (UPDATED) ===== */
+.armada-quicklinks {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.armada-quicklinks a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 30px;
+    text-decoration: none;
+    color: #f2f6fb;
+    font-size: 16px;
+    transition: 0.25s ease;
+}
+
+.armada-quicklinks a img {
+    width: 22px;
+}
+
+.armada-quicklinks a:hover {
+    border-color: var(--dark-panel-border-hover);
+    box-shadow: 0 0 20px var(--dark-panel-shadow-hover);
+}
+
+/* ===== COLLAPSIBLE MAP (NO BOX) ===== */
+.armada-map {
+    max-width: 1100px;
+    margin: 80px auto 0;
+    text-align: center;
+    position: relative;
+}
+
+.armada-map input {
+    display: none !important;
+}
+
+.map-toggle-label {
+    display: inline-block;
+    cursor: pointer;
+    font-family: "Cinzel Decorative", serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: var(--link);
+}
+
+.map-toggle-label::before {
+    content: 'Click to expand';
+    color: #FFFC;
+    position: absolute;
+    font-size: min(40px, 5vw);
+    inset: 40px 0 0px;
+    padding: 32px;
+    pointer-events: revert;
+}
+
+.map-toggle-label::after {
+    content: '▶';
+}
+
+input:checked+.map-toggle-label::after {
+    content: '▼';
+}
+
+input:checked+.map-toggle-label::before {
+    display: none;
+}
+
+.map-content {
+    max-height: 120px;
+    overflow: hidden;
+    transition: 0.5s ease;
+    border: 1px solid var(--dark-panel-border);
+}
+
+.armada-map input:checked+.map-toggle-label+.map-content {
+    max-height: 2000px;
+}
+
+.map-content img {
+    width: 100%;
+    display: block;
+}
+
+.packwrap>div:nth-last-child(1),
+.packwrap>div:nth-last-child(2) {
+    width: min(calc(49% - 8px), 548px);
+    margin: 0 0 0 max(10px, calc(100% - 1100px)*0.5);
+    padding: 0px 0px 20px;
+}
+
+.packwrap>div:nth-last-child(2) {
+    float: right;
+    margin: 0 max(10px, calc(100% - 1100px)*0.5) 0 0;
+}
+
+.packwrap>div:nth-last-child(2) div {
+    margin: 0px;
+}
+
+.packwrap>div:nth-last-child(1) h2,
+.packwrap>div:nth-last-child(2) h2 {
+    text-align: center;
+}
+
+.packwrap>div:nth-last-child(1) ul,
+.packwrap>div:nth-last-child(2) ul {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 400px;
+    margin: auto;
+}
+
+.packwrap>div:nth-last-child(1) a,
+.packwrap>div:nth-last-child(2) a {
+    display: block;
+    background: var(--dark-panel-bg);
+    border-radius: 2px;
+    padding: 6px;
+    width: 180px;
+    text-align: center;
+    border: 1px solid var(--dark-panel-border);
+    transition: 0.25s ease;
+}
+
+.packwrap>div:nth-last-child(1) a:hover,
+.packwrap>div:nth-last-child(2) a:hover {
+    border-color: var(--dark-panel-border-hover);
+    box-shadow: 0 0 20px var(--dark-panel-shadow-hover);
+}
+
+div:has(.remove-parent-header)>h2:first-child {
+    display: none;
+}
+
+.flex:has(div > div > .remove-parent-header) {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .armada-main-panels .armada-panel {
+        width: 100%
+    }
+}
+
+#content {
+    background: var(--content-bg);
+    margin-top: 600px;
+    position: relative;
+}
+
+nav,
+nav * {
+    background: #131720 !important;
+}
+
+.poi-panel {
+    padding: 0px 0px 30px;
+    background: #022D56;
+    border: 1px solid var(--dark-panel-border);
+    box-shadow: inset 0 0 12px #121124;
+}
+
+.poi-panel input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.poi-tabs {
+    display: flex;
+    background: linear-gradient(#00133a, #00133a);
+    border-bottom: 2px solid #111;
+}
+
+.poi-tabs label {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--link);
+    border-right: 1px solid #0e111a;
+}
+
+.poi-tabs label:last-child {
+    border-right: none;
+}
+
+#dreamers:checked~.poi-tabs label[for="dreamers"],
+#soul:checked~.poi-tabs label[for="soul"],
+#gale:checked~.poi-tabs label[for="gale"],
+#caves:checked~.poi-tabs label[for="caves"],
+#dens:checked~.poi-tabs label[for="dens"] {
+    background: #022d56;
+    color: var(--link-hover);
+    box-shadow: inset 0 -3px 0 #06547a;
+}
+
+.content {
+    position: relative;
+    display: none;
+    padding: 0 30px;
+}
+
+#dreamers:checked~.poi-content .dreamers,
+#soul:checked~.poi-content .soul,
+#gale:checked~.poi-content .gale,
+#caves:checked~.poi-content .caves,
+#dens:checked~.poi-content .dens {
+    display: block;
+}
+
+.tab-image {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    margin: 15px 0;
+    border: 1px solid var(--dark-panel-border);
+}
+
+.armada-panel details {
+    background: #00133a;
+    border: 1px solid var(--dark-panel-border);
+    margin: 10px 0;
+    position: relative;
+}
+
+.poi-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.armada-panel summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 42px;
+}
+
+.poi-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.armada-panel summary::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 13px;
+    width: 18px;
+    height: 18px;
+    background: url("https://i.imgur.com/EmRopWS.png") center / contain no-repeat;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.armada-panel details[open] summary::before {
+    transform: rotate(90deg);
+    filter: brightness(1.4) drop-shadow(0 0 6px rgba(255, 180, 60, 0.6));
+}
+
+.armada-panel details p {
+    padding: 0px 10px;
+}
+
+details.poi-item {
+    position: relative;
+}
+
+.armada-panel details:not([open]):hover {
+    filter: brightness(1.5);
+}
+
+details[open].poi-item::after {
+    border: 1.5px solid var(--dark-panel-border-hover);
+    box-shadow: 0 0 8px var(--dark-panel-shadow-hover);
+}
+
+.dropdown-content {
+    display: flex;
+    padding: 10px;
+}
+
+.dropdown-content p {
+    flex: 1;
+}
+
+.dropdown-img {
+    width: 160px !important;
+    height: 140px !important;
+    object-fit: cover;
+    border: 1px solid var(--dark-panel-border);
+    box-shadow: inset 0 0 12px #000;
+}
+
+.dropdown-text {
+    display: inline-block !important;
+    width: calc(100% - 200px);
+    margin-left: 15px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.den-section-title {
+    margin: 25px 0 10px 0;
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #3b2a1d, transparent);
+    border-left: 3px solid #c69c4d;
+    color: #f0d8a8;
+}
+
+ul:has(.relation) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    position: relative;
+    margin-bottom: 110px;
+}
+
+li:has(.relation) {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.relation {
+    text-align: left;
+    font-family: "Dosis", sans-serif;
+    min-width: 300px;
+}
+
+.relation center {
+    font-size: 24px;
+    color: #39c4fb;
+    text-shadow: 0 0 4px #39c4fb;
+}
+
+#cheeky-dragon-1 {
+    position: relative;
+}
+
+#cheeky-dragon-1::before {
+    content: 'S';
+    position: absolute;
+    right: -36px;
+    top: -36px;
+    rotate: -10deg;
+}
+
+#cheeky-dragon-1::after {
+    content: '';
+    position: absolute;
+    right: -210px;
+    top: -170px;
+    width: 200px;
+    height: 200px;
+    background: url('https://iris-kane.github.io/ardent/temp/dragon-01.png');
+}
+
+#content::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: -163px;
+    width: 270px;
+    height: 270px;
+    background: no-repeat url('https://i.imgur.com/Ggzduwq.png') center / 100%;
+    rotate: 4deg;
+}
+
+#content::after {
+    content: '';
+    position: absolute;
+    right: -70px;
+    top: -72px;
+    width: 100px;
+    height: 270px;
+    background: no-repeat url('https://i.imgur.com/GWxuepf.png') center / 200%;
+    rotate: 3deg;
+}
+
+.content::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    background: no-repeat url('https://iris-kane.github.io/ardent/temp/grabs_dagger_on_button_6.png') center / 100%;
+    rotate: 0deg;
+}
+
+#cheeky-dragon-2 {
+    position: relative;
+}
+
+#cheeky-dragon-2::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -61px;
+    width: 100%;
+    height: 90px;
+    rotate: 0deg;
+    background: url('https://iris-kane.github.io/ardent/temp/button_7.png') center / auto 100% no-repeat;
+}
+
+ul:has(.relation)::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    bottom: -60px;
+    width: 140px;
+    height: 140px;
+    rotate: 0deg;
+    background: url('https://iris-kane.github.io/ardent/temp/S_dragon_1.png') center / auto 100% no-repeat;
+}
+
+ul:has(.relation)::before {
+    content: '';
+    position: absolute;
+    bottom: -190px;
+    width: 100%;
+    height: 200px;
+    rotate: 0deg;
+    background: url('https://i.imgur.com/LhtsdiD.png') center / auto 100% no-repeat;
+    filter: drop-shadow(0 0 4px #FFF);
+    pointer-events: none;
+}
+
+.armada-main-panels::before {
+    content: '';
+    position: absolute;
+    left: -106px;
+    bottom: -48px;
+    width: 140px;
+    height: 140px;
+    rotate: 0deg;
+    background: url('https://iris-kane.github.io/ardent/temp/Between_letters_fighting_2.webp') center / auto 100% no-repeat;
+}
+
+.armada-main-panels::after {
+    content: '';
+    position: absolute;
+    left: 53px;
+    bottom: -154px;
+    width: 210px;
+    height: 140px;
+    rotate: 25deg;
+    background: url('https://iris-kane.github.io/ardent/temp/Fighting_3.webp') center / auto 100% no-repeat;
+}
+
+.armada-map::after {
+    content: '';
+    position: absolute;
+    left: 65px;
+    top: -20px;
+    width: 130px;
+    height: 100px;
+    background: url('https://iris-kane.github.io/ardent/temp/Holds_on_10.png') center / auto 100% no-repeat;
+}
+
+*::after,
+*::before {
+    pointer-events: none;
+}
+
+.rank {
+    padding: 5px 10px;
+    font-family: "Dosis", sans-serif;
+    text-align: justify;
+}
+
+div:has(> details > .rank) {
+    border: 1px solid var(--dark-panel-border);
+    background: var(--dark-panel-bg);
+    height: min-content;
+}
+
+div:has(> details > .rank) details {
+    border: none;
+}
+
+div:has(> details > .rank) summary {
+    font-family: "Cinzel Decorative", serif;
+    background: #0006;
+    color: var(--link) !important;
+}
+
+div:has(> details > .rank) summary:hover {
+    color: var(--link-hover) !important;
+    text-shadow: 0 0 6px var(--link-hover) !important;
+}
+
+.requirement {
+    background: #0003;
+    border: 1px solid #000A;
+    margin: 10px 30px;
+    text-align: center;
+}
+
+div:has(> details > .rank)::after {
+    content: 'Mr Fluffles\AWolfington\A Barksalot ';
+    white-space: pre;
+    translate: 0px -22px;
+    display: block;
+}
