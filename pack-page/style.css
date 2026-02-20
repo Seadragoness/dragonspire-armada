@@ -757,9 +757,14 @@ div:has(> details > .rank) details {
 }
 
 div:has(> details > .rank) summary {
-    font-family: "Cinzel Decorative", serif;
+    font-size: 12px;
     background: #0006;
     color: var(--link) !important;
+}
+
+
+div:has(> details > .rank) summary:marker {
+    content: none;
 }
 
 div:has(> details > .rank) summary:hover {
