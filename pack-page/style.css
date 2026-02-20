@@ -773,10 +773,3 @@ div:has(> details > .rank) summary:hover {
     margin: 10px 30px;
     text-align: center;
 }
-
-div:has(> details > .rank)::after {
-    content: 'Mr Fluffles\AWolfington\A Barksalot ';
-    white-space: pre;
-    translate: 0px -22px;
-    display: block;
-}
