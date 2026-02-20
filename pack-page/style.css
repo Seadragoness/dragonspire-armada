@@ -763,7 +763,7 @@ div:has(> details > .rank) summary {
 }
 
 
-div:has(> details > .rank) summary:marker {
+div:has(> details > .rank) summary::marker {
     content: none;
 }
 
@@ -775,7 +775,7 @@ div:has(> details > .rank) summary:hover {
 .requirement {
     background: #0003;
     border: 1px solid #000A;
-    margin: 10px 30px;
+    margin: 10px 2%;
     text-align: center;
 }
 div:has(> details > .credits) {
