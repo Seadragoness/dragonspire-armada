@@ -773,7 +773,6 @@ div:has(> details > .rank) summary:hover {
     margin: 10px 30px;
     text-align: center;
 }
-
-div:has(> details > .custom-footer) {
+div:has(> details > .credits) {
     display: none;
 }
