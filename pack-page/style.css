@@ -696,7 +696,7 @@ ul:has(.relation)::after {
 ul:has(.relation)::before {
     content: '';
     position: absolute;
-    bottom: -156px;
+    bottom: -184px;
     width: 100%;
     height: 180px;
     background: url('images/cheeky-09.png') center / auto 100% no-repeat;
@@ -747,8 +747,34 @@ ul:has(.relation)::before {
 }
 
 .flex:has(> div > details > .rank) {
+    position: relative;
     flex-wrap: wrap;
-    margin: 20px -10px;
+    margin: 40px -10px;
+}
+.flex:has(> div > details > .rank)::before {    
+    content: 'Tier Label';
+    position: absolute;
+    top: -28px;
+    font-family: Redressed;
+    font-size: 20px;
+}
+.flex:has(> div > details > .rank):nth-of-type(2)::before {
+    content: 'Tier 1 - Sovereign';
+}
+.flex:has(> div > details > .rank):nth-of-type(3)::before {
+    content: 'Tier 2 - High Command';
+}
+.flex:has(> div > details > .rank):nth-of-type(4)::before {
+    content: 'Tier 3 - Command';
+}
+.flex:has(> div > details > .rank):nth-of-type(5)::before {
+    content: 'Tier 4 - Specialists';
+}
+.flex:has(> div > details > .rank):nth-of-type(6)::before {
+    content: 'Tier 5 - Early Entry';
+}
+.flex:has(> div > details > .rank):nth-of-type(7)::before {
+    content: 'Tier 6 - Beginner';
 }
 
 div:has(> details > .rank):has(summary:hover) {
@@ -761,9 +787,13 @@ div:has(> details > .rank) {
     background: var(--dark-panel-bg);
     height: min-content;
     min-width: 240px;
-    margin: -0.5px;
+    margin: 4px;
+    min-height: 72px;
 }
 
+div:has(> details > .rank) br {
+    display: none;
+}
 div:has(> details > .rank) details {
     border: none;
 }
