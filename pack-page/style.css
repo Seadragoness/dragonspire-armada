@@ -42,7 +42,7 @@ h2 {
 }
 
 /* Inherited from pack page */
-h2, a:hover, summary:hover, header .title, input.button:hover, .packbanner > *, input.button, summary, html, p {
+h2, a, a:hover, summary:hover, header .title, input.button:hover, .packbanner > *, input.button, summary, html, p {
     color: var(--text) !important;
 }
 summary {
