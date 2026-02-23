@@ -45,7 +45,9 @@ h2 {
 h2, a:hover, summary:hover, header .title, input.button:hover, .packbanner>*, a, input.button, summary, html, p {
     color: var(--text) !important;
 }
-
+summary {
+    cursor: pointer;
+}
 .armada-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -203,7 +205,6 @@ li:has(.relation),
 .laws summary {
     display: block;
     padding: 12px 0 12px 42px;
-    cursor: pointer;
     font-family: "Cinzel Decorative", serif;
     border: none;
     transition: 0.05s ease-in;
@@ -502,7 +503,6 @@ nav * {
 
 .armada-panel summary {
     list-style: none;
-    cursor: pointer;
     font-weight: bold;
     position: relative;
     padding: 10px 42px;
@@ -820,6 +820,36 @@ div:has(> details > .rank) summary:hover {
     margin: 10px 2%;
     text-align: center;
 }
-div:has(> details > .credits) {
-    display: none;
+
+div:has(> details > .credits) summary {
+    background: none;
+    font-family: "Cinzel Decorative", serif;
+}
+div:has(> details > .credits) summary::marker {
+    content: none;
+}
+div:has(> details > .credits) summary::before, div:has(> details > .credits) summary::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -8px 8px -14px;
+    background: linear-gradient(230deg, #dff, slategray);
+    mask: url('https://seadragoness.github.io/dragonspire-armada/pack-page/images/dragon-icon-01.svg') center / 100%;
+}
+div:has(> details > .credits) summary::before {
+    transform: scaleX(-1);
+}
+div:has(> details > .credits) details:has(summary:hover) {
+    border: 1px solid var(--dark-panel-border-hover);
+}
+div:has(> details > .credits) summary:hover {
+    filter: brightness(1.2) drop-shadow(0 0 4px #FFF);
+}
+div:has(> details > .credits) details {
+    border: 1px solid var(--dark-panel-border);
+    background: #0008;
+}
+.credits {
+    padding: 0px 0px 10px;
 }
