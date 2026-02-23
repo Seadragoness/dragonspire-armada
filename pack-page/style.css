@@ -42,7 +42,7 @@ h2 {
 }
 
 /* Inherited from pack page */
-h2, a:hover, summary:hover, header .title, input.button:hover, .packbanner>*, a, input.button, summary, html, p {
+h2, a:hover, summary:hover, header .title, input.button:hover, .packbanner > *, input.button, summary, html, p {
     color: var(--text) !important;
 }
 summary {
@@ -852,4 +852,12 @@ div:has(> details > .credits) details {
 }
 .credits {
     padding: 0px 0px 10px;
+}
+
+.credits a {
+    color: skyblue !important;
+}
+.credits a:hover {
+    color: skyblue !important;
+    text-decoration: underline !important;;
 }
