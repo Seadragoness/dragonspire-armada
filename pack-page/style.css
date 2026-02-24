@@ -16,6 +16,10 @@
 /* =============================== ARMADA – CITADEL SYSTEM =============================== */
 body {
     overflow-x: hidden;
+    background-attachment: fixed;
+}
+body::after {
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
