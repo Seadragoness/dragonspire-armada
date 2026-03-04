@@ -662,10 +662,10 @@ li:has(.relation) {
     position: absolute;
     right: 0px;
     top: 0px;
-    width: 100px;
-    height: 100px;
-    background: no-repeat url('https://iris-kane.github.io/ardent/temp/grabs_dagger_on_button_6.png') center / 100%;
+    width: 110px;
+    height: 110px;
     rotate: 0deg;
+    background: no-repeat url('images/cheeky-06.png') center / 100%;
 }
 
 #cheeky-dragon-2 {
@@ -676,11 +676,11 @@ li:has(.relation) {
     content: '';
     position: absolute;
     right: 0;
-    top: -61px;
+    top: -78px;
     width: 100%;
-    height: 90px;
+    height: 110px;
     rotate: 0deg;
-    background: url('https://iris-kane.github.io/ardent/temp/button_7.png') center / auto 100% no-repeat;
+    background: url('images/cheeky-03.png') center / auto 100% no-repeat;
 }
 
 ul:has(.relation)::after {
@@ -691,7 +691,8 @@ ul:has(.relation)::after {
     width: 140px;
     height: 140px;
     rotate: 0deg;
-    background: url('https://iris-kane.github.io/ardent/temp/S_dragon_1.png') center / auto 100% no-repeat;
+    background: url('images/cheeky-10.png') center / auto 100% no-repeat;
+    filter: drop-shadow(0px 0px 3px #f9f6);
 }
 
 ul:has(.relation)::before {
@@ -707,23 +708,24 @@ ul:has(.relation)::before {
 .armada-main-panels::before {
     content: '';
     position: absolute;
-    left: -106px;
-    bottom: -48px;
-    width: 140px;
+    left: -111px;
+    bottom: -37px;
+    width: 150px;
     height: 140px;
-    rotate: 0deg;
-    background: url('https://iris-kane.github.io/ardent/temp/Between_letters_fighting_2.webp') center / auto 100% no-repeat;
+    rotate: 270deg;
+    background: url('images/cheeky-07.png') center / auto 100% no-repeat;
 }
 
 .armada-main-panels::after {
     content: '';
     position: absolute;
-    left: 53px;
-    bottom: -154px;
+    left: 52px;
+    bottom: -147px;
     width: 210px;
     height: 140px;
-    rotate: 25deg;
-    background: url('https://iris-kane.github.io/ardent/temp/Fighting_3.webp') center / auto 100% no-repeat;
+    rotate: -2deg;
+    background: url('images/cheeky-08.png') center / auto 100% no-repeat;
+    filter: drop-shadow(0px 0px 1px #ffe6);
 }
 
 .armada-map::after {
