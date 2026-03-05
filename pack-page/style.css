@@ -164,6 +164,10 @@ li:has(.relation),
     height: calc(100% - 80px);
 }
 
+.armada-panel .laws {
+    min-height: 700px;
+}
+
 .laws summary:hover {
     color: var(--link) !important;
 }
@@ -696,7 +700,7 @@ ul:has(.relation)::after {
 }
 
 ul:has(.relation)::before {
-    content: '';
+    /* content: ''; */
     position: absolute;
     bottom: -184px;
     width: 100%;
