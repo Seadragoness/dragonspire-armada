@@ -164,7 +164,7 @@ li:has(.relation),
     height: calc(100% - 80px);
 }
 
-.armada-panel .laws {
+.armada-panel.laws {
     min-height: 700px;
 }
 
