@@ -735,8 +735,8 @@ ul:has(.relation)::before {
 .armada-map::after {
     content: '';
     position: absolute;
-    left: 65px;
-    top: -20px;
+    left: 40px;
+    top: -30px;
     width: 130px;
     height: 100px;
     background: url('images/cheeky-06.png') center / auto 100% no-repeat;
