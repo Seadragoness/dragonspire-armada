@@ -739,7 +739,8 @@ ul:has(.relation)::before {
     top: -20px;
     width: 130px;
     height: 100px;
-    background: url('https://iris-kane.github.io/ardent/temp/Holds_on_10.png') center / auto 100% no-repeat;
+    background: url('images/cheeky-06.png') center / auto 100% no-repeat;
+transform: scaleX(-1);
 }
 
 *::after,
