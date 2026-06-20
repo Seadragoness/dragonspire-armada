@@ -1,0 +1,11 @@
+/* Apply to all award blocks */
+[href$="pack=4#poi"] [href$="awards.css"] {
+  outline: 1px dashed magenta;
+  display: block;
+  height: 50px;
+}
+
+/* Override for user 6022 */
+.postwrap:has(.postbit_find[href$="6022"]) [href$="pack=4#poi"] [href$="awards.css"] {
+  outline: 1px dashed firebrick;
+}
