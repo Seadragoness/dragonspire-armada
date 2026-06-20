@@ -1,11 +1,26 @@
 /* Apply to all award blocks */
 [href$="pack=4#poi"] [href$="awards.css"] {
-  outline: 1px dashed magenta;
   display: block;
-  height: 50px;
+  height: 80px;
+  width: 400px;
+  margin: auto;
+}
+[href$="pack=4#poi"] [href$="awards.css"]::before {
+  content: "Foo";
+  color: #fff;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #0004;
+  box-shadow: inset 0 0 6px #0008;
+}
+[href$="pack=4#poi"] [href$="awards.css"]::before:hover {
+  text-shadow: none;
+  box-shadow: 0 0 6px #F00;
 }
 
 /* Override for user 6022 */
 .postwrap:has(.postbit_find[href$="6022"]) [href$="pack=4#poi"] [href$="awards.css"] {
-  outline: 1px dashed firebrick;
+  background: url('https://seadragoness.github.io/dragonspire-armada/awards/6022.png') center no-repeat
 }
